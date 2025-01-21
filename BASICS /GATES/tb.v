@@ -1,10 +1,10 @@
-module and_gate_tb;
+module and_gate_tb;  // You can rename "and_gate_tb" as per your requirement.
     reg a;
     reg b;
     wire y;
     
     
-    and_gate uut (
+    and_gate uut (    // You can rename "and_gate" as per your requirement.
     .a(a),
     .b(b),
     .y(y)
