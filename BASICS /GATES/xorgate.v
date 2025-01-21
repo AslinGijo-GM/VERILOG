@@ -3,5 +3,5 @@ module and_gate(
     input b,
     output y
     );
-    xor(y,a,b);
+    assign y = a ^ b;
 endmodule
