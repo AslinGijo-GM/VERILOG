@@ -9,7 +9,6 @@ wire y;
 );
 
 initial begin 
-$monitor("Time=%0t,a0=%d,a1=%d,b0=%d,b1=%d,y=%d",$time,a1,a0,b1,b0,y);
 
         a1 = 0; a0 = 0; b1 = 0; b0 = 0; #10;
         a1 = 0; a0 = 0; b1 = 0; b0 = 1; #10;
