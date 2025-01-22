@@ -1,4 +1,4 @@
-module greater(
+module lesser(
 
 input a0,a1,b0,b1,
 output y0,y1,y
