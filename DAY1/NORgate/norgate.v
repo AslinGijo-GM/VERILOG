@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module nandgate(
+module norgate(
 input a,b,
 output c
     );
