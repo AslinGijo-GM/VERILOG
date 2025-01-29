@@ -1,8 +1,8 @@
-module fulladder;
+module fulladder_tb;
 reg a,b,c;
 wire sum,carry;
 
-halfadder uut(
+fulladder uut(
 .a(a),
 .b(b),
 .c(c),
