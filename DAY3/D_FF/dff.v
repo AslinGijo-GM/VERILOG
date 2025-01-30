@@ -4,7 +4,7 @@ input d,
 output reg q
 );
 
-always @(posedge clk) begin
+  always @(posedge clk or posedge reset) begin
 if (reset) begin
   q=0;
   
