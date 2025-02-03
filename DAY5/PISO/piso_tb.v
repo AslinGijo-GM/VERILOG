@@ -16,10 +16,12 @@ initial begin
 end
 initial begin
     reset = 1; pi = 5'b11010; #10;
-    reset = 0; pi = 5'b11010; #10;
-    reset = 0; pi = 5'b10010; #10;  
-    reset = 0; pi = 5'b11110; #10;  
-    reset = 0; pi = 5'b10010; #10;       
+     reset = 0;#10;
+     reset = 0;#10;  
+     reset = 0;#10;  
+     reset = 0;#10;       
+     reset = 0;#10;
+     reset = 0;#10;
 
     $finish;
 end
