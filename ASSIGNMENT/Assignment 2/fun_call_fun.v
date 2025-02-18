@@ -1,30 +1,29 @@
-module oe(
-  input din,
-  input clk,
-  output reg [5:0]dout
+module funn(
+  output reg [3:0]dout
 );
   
-  reg [5:0]i=0;
-  always @(posedge clk) begin
+  initial begin
     
-    
-    if(i <20) begin
-    
-      dout = genn(i);
-    	 i = i+2;   
-    
-    end
-    
+    dout = fun1();
+    $display("call - %d",dout);
+  
   end
   
-  function [5:0]genn;
+  function [3:0]fun1;
     
-    input [5:0]in;
       begin
-        genn = in+2;
-        $display("Generated number: %d", dout);
+        fun1 = fun2(1);
       end
-
+    
+  endfunction
+  
+  function [3:0]fun2;
+    input [3:0]in;
+    
+    begin
+      fun2=in+2;
+    end
+    
   endfunction
   
 endmodule
