@@ -35,6 +35,10 @@ module mooreNOL #(parameter
     end
     
     always @(*) begin
-         out = (state ==s4) && (in == 1);
+            s0 : out = 0 ;
+            s1 : out = 0 ;
+            s2 : out = 0 ;
+            s3 : out = 0 ;
+            s4 : out = 1 ;
     end
 endmodule
