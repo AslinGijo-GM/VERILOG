@@ -1,0 +1,54 @@
+`timescale 1ns / 1ps
+
+module Timer_tb;
+    reg clk;
+    reg reset;
+    reg start;
+    reg stop;
+    wire start_on;
+    wire reset_on;
+    wire stop_on;
+    wire [9:0] milicount,mincount;
+    
+    parameter   START = 0,
+                RESET = 1,
+                STOP  = 2;
+    
+    Timer uut (
+        .clk(clk),
+        .reset(reset),
+        .start(start),
+        .stop(stop),
+        .start_on(start_on),
+        .reset_on(reset_on),
+        .stop_on(stop_on),
+        .milicount(milicount),
+        .mincount(mincount)
+    );
+    
+    initial begin
+        clk = 0 ;
+        forever #2 clk = ~clk;
+    end
+    
+    initial begin
+        start = 0;
+        stop = 0;
+        reset = 1;#5; reset = 0;
+        
+        start = 1; #10; 
+        start = 0; # 125;
+        
+        stop = 1;#20;
+        stop = 0;#10;
+        
+        $finish;
+        
+    end
+  
+  	initial begin
+      $dumpfile("dump.vcd");
+      $dumpvars;
+  	end
+    
+endmodule
